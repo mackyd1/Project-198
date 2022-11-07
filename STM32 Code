@@ -109,21 +109,21 @@ int main(void)
 	  HAL_Delay(500);
 
     HAL_AnalogRead(GPIOA, GPIO_PIN_0);
-    For (GPIO_PIN_0){
     if( GPIO_PIN_0 >= 1800){
-      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, 1);
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, 1);  // this loop indicates under what conditons the moisture sensor should be turned on 
     }else{
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, 0);
     }
     
     if ( GPIO_PIN_0 & GPIO_PIN_7, 1){
-   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, 1);  //flases the light when both condtions are active 
+   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, 1);  //flases the light when both condtions are active  // this is the double condition in which the moisture and temperature sensor will trigger the LED
 	  HAL_Delay(500);
 	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, 0);
 	  HAL_Delay(500);
-   
-   }
-    
+	  }
+
+
+
 
     /* USER CODE END WHILE */
 
